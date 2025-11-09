@@ -4,12 +4,16 @@
   <meta charset="utf-8" />
   <title>Redirecting...</title>
   <script>
-    const newDomain = "https://projectzuki.dev";
+    const newDomain = "https://projectzuki.dev"; // new domain
     const redirectURL = newDomain + window.location.pathname + window.location.search + window.location.hash;
     window.location.replace(redirectURL);
   </script>
 </head>
 <body>
-  <p>Redirecting to new site...</p>
+  <p>Redirecting… If nothing happens, <a id="link" href="#">click here</a>.</p>
+  <script>
+    document.getElementById('link').href =
+      "https://projectzuki.dev" + window.location.pathname + window.location.search + window.location.hash;
+  </script>
 </body>
 </html>
